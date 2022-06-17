@@ -1,6 +1,7 @@
 
 import AboutMe from './Components/AboutMe';
 import LandingPage from './Components/LandingPage';
+import MySkills from './Components/MySkills';
 import './Sass&Css/App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
     <LandingPage/>
     <AboutMe/>
+    <MySkills />
     </>
   );
 }

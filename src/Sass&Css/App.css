@@ -1,8 +1,4 @@
-:root {
-  --headerOpacity: 1;
-  --headerScale: 1;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;400;500&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -11,30 +7,23 @@
   scroll-behavior: smooth;
 }
 
-html, body {
-  height: 100vh;
-  overflow-x: hidden;
-  width: 101%;
-}
-
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 150%;
-  line-height: 1.4;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 .video-header {
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 100vw;
   height: 100vh;
 }
 
-.video-header, .video-header video, .video-header .viewport-header {
+.video-header video, .video-header .viewport-header {
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -49,6 +38,8 @@ body {
 }
 
 .video-header .viewport-header {
+  font-size: 150%;
+  line-height: 1.4;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,10 +53,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  opacity: 1;
-  opacity: var(--headerOpacity);
-  -webkit-transform: scale(var(--headerScale));
-          transform: scale(var(--headerScale));
 }
 
 .video-header .viewport-header h2 {
@@ -117,23 +104,60 @@ body {
   width: 100vw;
   height: 100vh;
   background: white;
-  position: relative;
   padding: 1rem;
-  margin-top: 100vh;
+  text-align: center;
 }
 
-.aboutMe::before {
-  content: "";
+.aboutMe p:nth-child(1) {
+  font-size: 2rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 500;
+}
+
+.aboutMe .aboutMe-div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.aboutMe .aboutMe-div div {
+  margin: 1rem;
+}
+
+.aboutMe .aboutMe-div .aboutme-left {
+  text-align: left;
+  width: 50%;
+}
+
+.aboutMe .aboutMe-div .aboutme-left p {
+  margin-top: 1rem;
+}
+
+.aboutMe .aboutMe-div .aboutme-right {
+  background-color: red;
+  width: 50%;
+  height: 100%;
+}
+
+.skills {
   width: 100vw;
   height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  top: -100vh;
-}
-
-.aboutMe p {
-  max-width: 600px;
-  margin: 1rem auto;
+  background: white;
+  background-color: white;
+  position: relative;
 }
 /*# sourceMappingURL=App.css.map */
