@@ -280,7 +280,10 @@ body {
 }
 
 .skills .skills__left h1, .skills .skills__right h1 {
+  font-family: "Inter", sans-serif;
   color: white(255, 115, 92);
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
 }
 
 .cards {
