@@ -4,13 +4,26 @@ import SkillsCard from '../UI/SkillsCard';
 
 const MySkills = () => {
 
-    
+    const scaleFactor = 1 / 30;
+    function moveBackground(event) {
+        const shapes = document.querySelectorAll(".skill_d");
+        const x = event.clientX * scaleFactor;
+        const y = event.clientY * scaleFactor;
+      
+        for (let i = 0; i < shapes.length; ++i) {
+          const isOdd = i % 2 !== 0;
+          const boolInt = isOdd ? -1 : 1;
+          // Added rotate after tutorial
+          shapes[i].style.transform = `translate(${y * boolInt}px, ${x * boolInt}px)`
+        }
+      }
+      
  
 
     
     return (
-        <section className='skills'>
-            <div className='skills__left'>
+        <section className='skills' onMouseMove={moveBackground}>
+            <div className='skills__left skill_d'>
                 <h1>What I'm Profecient With</h1>
                 <div className='cards'>
                 {
@@ -22,7 +35,7 @@ const MySkills = () => {
                 </div>
             
             </div>
-            <div className='skills__right'>
+            <div className='skills__right skill_d'>
             <h1>What I'm planning to learn</h1>
             <div className='cards'>
             {
