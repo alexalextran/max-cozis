@@ -140,3 +140,14 @@ $spotifyGreen: #2ecc71;
   }
 }
 
+@mixin fullScreen{
+    width: 100vw;
+    height: 100vh;
+}
+
+@mixin coverer {
+    @include fullScreen;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
