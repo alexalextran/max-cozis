@@ -1,0 +1,17 @@
+@import "./variables&functions";
+
+*{
+    margin: 0;
+    padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  @include scrollbar;
+  
+}
+
+html{
+  font-size: 1vw;
+  li{
+    list-style: none;
+  }
+}
