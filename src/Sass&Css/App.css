@@ -339,4 +339,31 @@ body {
   opacity: 1;
   bottom: -2em;
 }
+
+.mywork {
+  width: 100vw;
+  height: 100vh;
+  height: 70vh;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.values {
+  width: 100vw;
+  height: 100vh;
+  height: 75vh;
+  background-color: black;
+}
 /*# sourceMappingURL=App.css.map */
