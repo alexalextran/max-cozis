@@ -131,6 +131,9 @@ body {
   .skills__left, .skills__right{
     width: 40%;
     text-align: Center;
+    h1{
+      color: rgb(255,115,92);
+    }
   }
 }
 .cards{
@@ -151,6 +154,7 @@ body {
     padding: 0.5em;
   
   }
+ 
   p{
     position: absolute;
     left: 50%;
@@ -158,6 +162,8 @@ body {
     bottom: 0em;
     opacity: 0;
     transform: translateX(-50%);
+    color: white;
+    font-weight: 300;
   }
   &:hover > p{
     opacity: 1;

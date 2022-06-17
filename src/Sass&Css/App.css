@@ -262,6 +262,10 @@ body {
   text-align: Center;
 }
 
+.skills .skills__left h1, .skills .skills__right h1 {
+  color: #ff735c;
+}
+
 .cards {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -307,6 +311,8 @@ body {
   opacity: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  color: white;
+  font-weight: 300;
 }
 
 .skillsCard:hover > p {

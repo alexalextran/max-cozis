@@ -2,6 +2,9 @@
  import Sketching from './images/pencil.svg'
  import Perspective from './images/perspective.svg'
  import ColorTheory from './images/ColorTheory.svg'
+ import Photoshop from './images/Photoshop.svg'
+ import Adobe_Illustrator from './images/Adobe_Illustrator.svg'
+ import Concept_Art from './images/Concept_Art.svg'
 
  
  const skills_proffecient = [
@@ -25,3 +28,24 @@
 
 
 export {skills_proffecient} 
+
+const skills_learning = [
+    {
+    Name: "Photoshop",
+    Image: {Photoshop}
+    },
+    {
+    Name: "Adobe_Illustrator",
+    Image: {Adobe_Illustrator}
+    },
+    {
+    Name: "Concept_Art",
+    Image: {Concept_Art}
+    },
+    {
+    Name: "idk",
+    Image: {ColorTheory}
+    }
+]
+
+export {skills_learning}
