@@ -3,10 +3,12 @@ import Plx from "react-plx";
 import aboutMe from '../Assets/aboutme.jpg'
 
 const AboutMe = () => {
+
+    
     const exampleParallaxData = [
         {
-          start: '0',
-          duration: 500,
+          start: 'self',
+          duration: '50vh',
           properties: [
             {
               startValue: 0,
@@ -25,7 +27,7 @@ const AboutMe = () => {
       const aboutmeLeft = [
         {
           start: 'self',
-          duration: 500,
+          duration: '50vh',
           properties: [
             {
               startValue: 0,
@@ -44,7 +46,7 @@ const AboutMe = () => {
       const aboutmeRight = [
         {
           start: 'self',
-          duration: 500,
+          duration: '50vh',
           properties: [
             {
               startValue: 0,
@@ -70,7 +72,7 @@ const AboutMe = () => {
             <p>"Every great design begins with an even better story." -- Lorinda Mamo</p>
             </Plx>
             <div className='aboutMe-div'>
-            <Plx parallaxData={aboutmeLeft}>
+            <Plx parallaxData={aboutmeLeft} className="plx">
                 <div className='aboutme-left'>
                     <h1>Think Creatively</h1>
                     <p>Hey I'm max a visual and graphic artist who specialises in xyz, I developed a passion for art and design when i was very young and now I'm looking to make a career out of it</p>
@@ -78,9 +80,9 @@ const AboutMe = () => {
                 </div>
                 </Plx>
 
-                <Plx parallaxData={aboutmeRight}>
+                <Plx parallaxData={aboutmeRight}  className="plx">
                 <div className='aboutme-right'>
-                    <img src={aboutMe}></img>
+                    <img src={aboutMe} alt="svg-illustration"></img>
                 </div>
                 </Plx>
 

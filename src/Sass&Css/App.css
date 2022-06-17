@@ -140,6 +140,10 @@ body {
   height: fit-content;
 }
 
+.aboutMe .aboutMe-div .plx {
+  width: 50%;
+}
+
 .aboutMe .aboutMe-div .aboutme-left {
   text-align: left;
   width: 100%;
@@ -225,20 +229,36 @@ body {
 }
 
 .aboutMe .aboutMe-div .aboutme-right img {
-  width: 40em;
-  height: 24em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 21em;
 }
 
 .skills {
   width: 100vw;
   height: 100vh;
-  background: white;
-  background-color: white;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border: 2px solid black;
+  background-color: #1e1e1e;
+  color: white;
 }
 
-.plx {
-  padding: 0;
-  margin: 0;
+.skills div {
+  width: 40%;
+  border: 2px solid white;
+  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */
