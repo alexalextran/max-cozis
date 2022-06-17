@@ -1,5 +1,6 @@
 import React from 'react';
 import Plx from "react-plx";
+import aboutMe from '../Assets/aboutme.jpg'
 
 const AboutMe = () => {
     const exampleParallaxData = [
@@ -37,7 +38,7 @@ const AboutMe = () => {
                     <button>Download My Resume</button>
                 </div>
                 <div className='aboutme-right'>
-                    <img></img>
+                    <img src={aboutMe}></img>
                 </div>
             </div>
             
