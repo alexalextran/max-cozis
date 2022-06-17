@@ -238,6 +238,7 @@ body {
 .skills {
   width: 100vw;
   height: 100vh;
+  height: 65vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -256,9 +257,60 @@ body {
   color: white;
 }
 
-.skills div {
+.skills .skills__left, .skills .skills__right {
   width: 40%;
-  border: 2px solid white;
-  text-align: center;
+  text-align: Center;
+}
+
+.cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.skillsCard {
+  margin: 1em;
+  font-size: 1vw;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.skillsCard img {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: inherit;
+  padding: 0.5em;
+}
+
+.skillsCard p {
+  position: absolute;
+  left: 50%;
+  -webkit-transition: ALL 500ms;
+  transition: ALL 500ms;
+  bottom: 0em;
+  opacity: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.skillsCard:hover > p {
+  opacity: 1;
+  bottom: -2em;
 }
 /*# sourceMappingURL=App.css.map */

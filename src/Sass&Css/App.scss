@@ -118,16 +118,50 @@ body {
     }
 }
 }
+
+//SKILLS
+
 .skills{
   @include fullScreen;
+  height: 65vh;
   @include flexCenter(row);
   border: 2px solid black;
   background-color: $card;
   color: white;
-  div{
+  .skills__left, .skills__right{
     width: 40%;
-    border: 2px solid white;
-    text-align: center;
+    text-align: Center;
+  }
+}
+.cards{
+  @include flexCenter(row);
+  flex-wrap: wrap;
+}
+.skillsCard{
+  margin: 1em;
+  font-size: 1vw;
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  background-color: white;
+  border-radius: 1rem;
+  img{
+    width: fit-content;
+    height: inherit;
+    padding: 0.5em;
+  
+  }
+  p{
+    position: absolute;
+    left: 50%;
+    transition: ALL 500ms;
+    bottom: 0em;
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  &:hover > p{
+    opacity: 1;
+    bottom: -2em;
   }
 }
 

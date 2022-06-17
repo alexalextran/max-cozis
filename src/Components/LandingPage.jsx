@@ -11,7 +11,7 @@ const LandingPage = () => {
           autoPlay={"autoplay"}
           preload="auto"
           loop></video>
-  <div class="viewport-header">
+  <div className="viewport-header">
     <h2>
       <span>Max Cozis</span>
       Graphic Composer 

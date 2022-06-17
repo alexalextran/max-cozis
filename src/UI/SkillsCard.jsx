@@ -1,9 +1,12 @@
 import React from 'react';
 
-const SkillsCard = () => {
+const SkillsCard = ({img, name}) => {
     return (
-        <div>
-            
+        <div className='skillsCard'>
+            <img src={img}></img>
+            <p>
+               {name}
+            </p>
         </div>
     );
 }
