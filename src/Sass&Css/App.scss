@@ -215,7 +215,7 @@ body {
   height: fit-content;
   padding: 4em;
   font-size: 1vw;
-  @include flexCenter(row);
+  @include flexCenter(column);
   $red: #e84c3d;
 $grey: #ecedef;
 $black: #343434;

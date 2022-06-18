@@ -9,7 +9,9 @@ var time = today.getHours() + ":" + today.getMinutes();
     return (
         <section className='contact'>
 
-
+            <h2 className='contact__title'>Don't Be Afrait To Send Me A Message!
+            </h2>
+<div>
   <div class="card cardLeft">
     <form>
     <h1>Startup <span>Cinema</span></h1>
@@ -47,6 +49,7 @@ var time = today.getHours() + ":" + today.getMinutes();
       <span>seat</span>
     </div>
     <div class="barcode"></div>
+  </div>
   </div>
 
 
