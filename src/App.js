@@ -1,5 +1,6 @@
 
 import AboutMe from './Components/AboutMe';
+import Contact from './Components/Contact';
 import LandingPage from './Components/LandingPage';
 import MySkills from './Components/MySkills';
 import MyWork from './Components/MyWork';
@@ -14,6 +15,7 @@ function App() {
     <MySkills />
     <MyWork />
     <Values />
+    <Contact />
     </>
   );
 }

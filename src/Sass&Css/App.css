@@ -363,6 +363,7 @@ body {
 .values {
   width: 100vw;
   height: 100vh;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,7 +385,12 @@ body {
 
 .values > * {
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
   width: 70%;
+}
+
+.contact {
+  width: 100vw;
+  height: 100vh;
 }
 /*# sourceMappingURL=App.css.map */
