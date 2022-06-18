@@ -8,12 +8,11 @@
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
- 
-
 }
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  
+  font-size: 1vw;
+  overflow-x: hidden;
 }
 body {
   margin: 0;
@@ -73,6 +72,7 @@ body {
 .aboutMe {
   font-size: 1vw;
   @include fullScreen;
+  height: fit-content;
   background: white;
   padding: 1rem;
   text-align: center;
@@ -123,15 +123,17 @@ body {
 
 .skills{
   @include fullScreen;
-  height: 45vh;
+  height: fit-content;
+  padding: 6em 0;
   @include flexCenter(row);
   border: 2px solid black;
   background-color: $card;
   color: white;
   .skills__left, .skills__right{
     @include flexCenter(column);
-    width: 40%;
-    height: 60%;
+    width: fit-content;
+    height: fit-content;
+    padding: 2em;
     text-align: Center;
     background-color: $gray;
     border-radius: 2rem;
@@ -192,16 +194,17 @@ body {
 
 .values{
   @include fullScreen;
-  padding: 2rem;
+ 
+  padding: 5em 3rem;
   @include flexCenter(column);
-  height: 100vh;
+  height: fit-content;
   background-color: black;
   color: white;
   text-align: center;
   & > *{
-    margin-bottom: 1rem;
-    font-size: 2rem;
+    margin-bottom: 2rem;
     width: 70%;
+    font-size: 1.8rem;
   }
 }
 
@@ -209,6 +212,8 @@ body {
 
 .contact{
   @include fullScreen;
+  height: fit-content;
+  padding: 4em;
   font-size: 1vw;
   @include flexCenter(row);
   $red: #e84c3d;
@@ -217,7 +222,7 @@ $black: #343434;
 
 .card {
   background: linear-gradient(to bottom, $red 0%, $red 26%, $grey 26%, $grey 100%);
-  height: 30em;
+  height: 40em;
   float: left;
   position: relative;
   padding: 1em;
@@ -226,13 +231,13 @@ $black: #343434;
 .cardLeft {
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
-  width: 40em;
+  width: 50em;
 }
 
 .cardRight {
-  padding: 3em 0;
+  padding: 5em 0;
   @include flexCustom(top, center, column);
-  width: 12.8em;
+  width: 20.8em;
   border-left: .18em dashed #fff;
   border-radius: 1em;
   &:before,
@@ -256,7 +261,7 @@ $black: #343434;
 
 h1 {
   font-size: 1.1em;
-  margin-top: 0.5em;
+  margin-top: 1em;
   font-size: 3em;
   span {
     font-weight: normal;
@@ -266,35 +271,58 @@ h1 {
 .title, .name, .seat, .time {
   text-transform: uppercase;
   font-weight: normal;
-  h2 {
-    font-size: 1.5em;
-    color: #525252;
-    margin: 0;
-   }
   span {
     font-size: .7em;
     color: #a2aeae;
   }
 }
 
-.title {
+.name{
+  margin-top: 1em;
+}
+.title{
+  margin-top: 2.8em;
+}
+
+.title, .name {
   & > *{
     display: block;
   }
-  margin-top: 3em;
+}
+.description{
+  margin: 1em 0;
+}
+input{
+  @include input;
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
 }
 
-.name, .seat, .time {
-  margin-top: 2em;
-  margin-right: 1em;
+textarea{
+  @include textarea;
+  height: 8em;
+  font-size: 1em;
 }
 
 .seat, .time {
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.seat, .time, .button {
   float: left;
+  button{
+    @include button;
+  }
+}
+
+.button{
+  margin: 1em;
+  margin-right: 3em;
 }
 
 img {
-  width: 3em;
+  width: 4em;
 }
 
 .number {
@@ -303,7 +331,7 @@ img {
   h3 {
     color: $red;
     margin: .9em 0 0 0;
-    font-size: 2.5em;
+    font-size: 6em;
     
   }
   span {

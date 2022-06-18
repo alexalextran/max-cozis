@@ -149,24 +149,24 @@ $spotifyGreen: #2ecc71;
 }
 
 @mixin input {
-  color: white;
-  margin-bottom: 30px;
+  color: rgb(0, 0, 0);
   background-color: transparent;
-  padding: 1rem;
-  width: 4rem;
-  
+  width: 100%;
+  padding: 0.5em 0;
   border: none;
  outline: none;
   transition: border 500ms;
-  text-align: center;
-  border-bottom: 2px solid white;
-  font-size: 2rem;
+  border-bottom: 2px solid rgb(75, 72, 72);
 
   &:focus {
     outline: none;
-    border-bottom: 2px solid $spotifyGreen;
+    border-bottom: 2px solid #e84c3d;
     resize: none;
   }
+}
+
+@mixin textarea{
+  @extend input
 }
 
 @mixin fullScreen{

@@ -2,26 +2,39 @@ import React from 'react';
 import logo from '../Assets/punpun-transparent.png'
 
 const Contact = () => {
+
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes();
+
     return (
         <section className='contact'>
 
 
   <div class="card cardLeft">
+    <form>
     <h1>Startup <span>Cinema</span></h1>
     <div class="title">
-      <input></input>
+      <input placeholder='Email...'></input>
       <span>movie</span>
     </div>
     <div class="name">
-      <h2>Vladimir Kudinov</h2>
+    <input placeholder='Name...'></input>
       <span>name</span>
     </div>
+    <div className='description'>
+       <textarea></textarea> 
+       <span>Description...</span>
+    </div>
+    <div class="button">
+    <button>Send it my way</button>
+    </div>
+    </form>
     <div class="seat">
       <h2>156</h2>
       <span>seat</span>
     </div>
     <div class="time">
-      <h2>12:00</h2>
+      <h2>{time}</h2>
       <span>time</span>
     </div>
   </div>

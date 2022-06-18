@@ -10,6 +10,8 @@
 
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -105,6 +107,9 @@ body {
   font-size: 1vw;
   width: 100vw;
   height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background: white;
   padding: 1rem;
   text-align: center;
@@ -238,7 +243,10 @@ body {
 .skills {
   width: 100vw;
   height: 100vh;
-  height: 45vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 6em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -271,8 +279,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 40%;
-  height: 60%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 2em;
   text-align: Center;
   background-color: #4d4d4d;
   border-radius: 2rem;
@@ -363,7 +376,7 @@ body {
 .values {
   width: 100vw;
   height: 100vh;
-  padding: 2rem;
+  padding: 5em 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -377,21 +390,27 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: black;
   color: white;
   text-align: center;
 }
 
 .values > * {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  margin-bottom: 2rem;
   width: 70%;
+  font-size: 1.8rem;
 }
 
 .contact {
   width: 100vw;
   height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4em;
   font-size: 1vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,7 +430,7 @@ body {
 .contact .card {
   background: -webkit-gradient(linear, left top, left bottom, from(#e84c3d), color-stop(26%, #e84c3d), color-stop(26%, #ecedef), to(#ecedef));
   background: linear-gradient(to bottom, #e84c3d 0%, #e84c3d 26%, #ecedef 26%, #ecedef 100%);
-  height: 30em;
+  height: 40em;
   float: left;
   position: relative;
   padding: 1em;
@@ -420,11 +439,11 @@ body {
 .contact .cardLeft {
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
-  width: 40em;
+  width: 50em;
 }
 
 .contact .cardRight {
-  padding: 3em 0;
+  padding: 5em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -438,7 +457,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 12.8em;
+  width: 20.8em;
   border-left: .18em dashed #fff;
   border-radius: 1em;
 }
@@ -464,7 +483,7 @@ body {
 
 .contact h1 {
   font-size: 1.1em;
-  margin-top: 0.5em;
+  margin-top: 1em;
   font-size: 3em;
 }
 
@@ -477,36 +496,132 @@ body {
   font-weight: normal;
 }
 
-.contact .title h2, .contact .name h2, .contact .seat h2, .contact .time h2 {
-  font-size: 1.5em;
-  color: #525252;
-  margin: 0;
-}
-
 .contact .title span, .contact .name span, .contact .seat span, .contact .time span {
   font-size: .7em;
   color: #a2aeae;
 }
 
-.contact .title {
-  margin-top: 3em;
+.contact .name {
+  margin-top: 1em;
 }
 
-.contact .title > * {
+.contact .title {
+  margin-top: 2.8em;
+}
+
+.contact .title > *, .contact .name > * {
   display: block;
 }
 
-.contact .name, .contact .seat, .contact .time {
-  margin-top: 2em;
-  margin-right: 1em;
+.contact .description {
+  margin: 1em 0;
+}
+
+.contact input, .contact textarea {
+  color: black;
+  background-color: transparent;
+  width: 100%;
+  padding: 0.5em 0;
+  border: none;
+  outline: none;
+  -webkit-transition: border 500ms;
+  transition: border 500ms;
+  border-bottom: 2px solid #4b4848;
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+}
+
+.contact input:focus, .contact textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #e84c3d;
+  resize: none;
+}
+
+.contact textarea {
+  height: 8em;
+  font-size: 1em;
 }
 
 .contact .seat, .contact .time {
+  margin-top: 1em;
+  margin-right: 1em;
+}
+
+.contact .seat, .contact .time, .contact .button {
   float: left;
 }
 
+.contact .seat button, .contact .time button, .contact .button button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  -webkit-box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+          box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.contact .seat button:focus, .contact .time button:focus, .contact .button button:focus {
+  text-decoration: none;
+}
+
+.contact .seat button:hover, .contact .time button:hover, .contact .button button:hover {
+  text-decoration: none;
+  background-color: gray;
+}
+
+.contact .seat button:active, .contact .time button:active, .contact .button button:active {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+          box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.contact .seat button:not([disabled]):active, .contact .time button:not([disabled]):active, .contact .button button:not([disabled]):active {
+  -webkit-box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+          box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .contact .seat button .button-50, .contact .time button .button-50, .contact .button button .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+.contact .button {
+  margin: 1em;
+  margin-right: 3em;
+}
+
 .contact img {
-  width: 3em;
+  width: 4em;
 }
 
 .contact .number {
@@ -517,7 +632,7 @@ body {
 .contact .number h3 {
   color: #e84c3d;
   margin: .9em 0 0 0;
-  font-size: 2.5em;
+  font-size: 6em;
 }
 
 .contact .number span {
