@@ -491,12 +491,12 @@ body {
   font-weight: normal;
 }
 
-.contact .title, .contact .name, .contact .seat, .contact .time {
+.contact .title, .contact .name, .contact .seat, .contact .time, .contact .description {
   text-transform: uppercase;
   font-weight: normal;
 }
 
-.contact .title span, .contact .name span, .contact .seat span, .contact .time span {
+.contact .title span, .contact .name span, .contact .seat span, .contact .time span, .contact .description span {
   font-size: .7em;
   color: #a2aeae;
 }

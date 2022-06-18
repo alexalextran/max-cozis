@@ -21,7 +21,7 @@ var time = today.getHours() + ":" + today.getMinutes();
     </div>
     <div class="name">
     <input placeholder='Name...'></input>
-      <span>name</span>
+      <span>Director</span>
     </div>
     <div className='description'>
        <textarea></textarea> 
