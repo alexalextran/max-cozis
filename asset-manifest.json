@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/max-cozis/static/css/main.e3d1db98.css",
-    "main.js": "/max-cozis/static/js/main.b9261c69.js",
+    "main.css": "/max-cozis/static/css/main.c58b5d49.css",
+    "main.js": "/max-cozis/static/js/main.e47556e0.js",
     "static/js/787.db0fc8cc.chunk.js": "/max-cozis/static/js/787.db0fc8cc.chunk.js",
     "static/media/landingPage-MC.mp4": "/max-cozis/static/media/landingPage-MC.ee3d2963b96235bfb76f.mp4",
     "static/media/aboutme.jpg": "/max-cozis/static/media/aboutme.d2f452c4094e4b6c5c22.jpg",
+    "static/media/punpun-transparent.png": "/max-cozis/static/media/punpun-transparent.2086b919ccbc1e28cfb4.png",
     "static/media/ProCreate.png": "/max-cozis/static/media/ProCreate.5243ff5225390f9b647e.png",
     "static/media/perspective.svg": "/max-cozis/static/media/perspective.cf69d2134f970442184e741ecabf9fb2.svg",
     "static/media/Concept_Art.svg": "/max-cozis/static/media/Concept_Art.9e7beeb5e24738797b5bf5c253f87b45.svg",
@@ -13,12 +14,12 @@
     "static/media/Photoshop.svg": "/max-cozis/static/media/Photoshop.4a391b7067e054e5d86cf57fa1723159.svg",
     "static/media/Adobe_Illustrator.svg": "/max-cozis/static/media/Adobe_Illustrator.883c82bcfa8e4f39f33068e1165b94a6.svg",
     "index.html": "/max-cozis/index.html",
-    "main.e3d1db98.css.map": "/max-cozis/static/css/main.e3d1db98.css.map",
-    "main.b9261c69.js.map": "/max-cozis/static/js/main.b9261c69.js.map",
+    "main.c58b5d49.css.map": "/max-cozis/static/css/main.c58b5d49.css.map",
+    "main.e47556e0.js.map": "/max-cozis/static/js/main.e47556e0.js.map",
     "787.db0fc8cc.chunk.js.map": "/max-cozis/static/js/787.db0fc8cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e3d1db98.css",
-    "static/js/main.b9261c69.js"
+    "static/css/main.c58b5d49.css",
+    "static/js/main.e47556e0.js"
   ]
 }
