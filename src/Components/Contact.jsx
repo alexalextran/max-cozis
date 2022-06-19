@@ -12,43 +12,43 @@ var time = today.getHours() + ":" + today.getMinutes();
             <h2 className='contact__title'>Don't Be Afrait To Send Me A Message!
             </h2>
 <div>
-  <div class="card cardLeft">
+  <div className="card cardLeft">
     <form>
     <h1>Startup <span>Cinema</span></h1>
-    <div class="title">
+    <div className="title">
       <input placeholder='Email...'></input>
       <span>movie</span>
     </div>
-    <div class="name">
+    <div className="name">
     <input placeholder='Name...'></input>
       <span>Director</span>
     </div>
     <div className='description'>
-       <textarea></textarea> 
-       <span>Description...</span>
+       <textarea placeholder='Message...'></textarea> 
+       <span>Description</span>
     </div>
-    <div class="button">
+    <div className="button">
     <button>Send it my way</button>
     </div>
     </form>
-    <div class="seat">
+    <div className="seat">
       <h2>156</h2>
       <span>seat</span>
     </div>
-    <div class="time">
+    <div className="time">
       <h2>{time}</h2>
       <span>time</span>
     </div>
   </div>
 
 
-  <div class="card cardRight">
+  <div className="card cardRight">
     <img src={logo} alt="logo"></img>
-    <div class="number">
+    <div className="number">
       <h3>156</h3>
       <span>seat</span>
     </div>
-    <div class="barcode"></div>
+    <div className="barcode"></div>
   </div>
   </div>
 

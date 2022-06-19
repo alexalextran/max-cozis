@@ -67,7 +67,7 @@ const AboutMe = () => {
 
 
     return (
-        <section className='aboutMe'>
+        <section className='aboutMe' id='aboutMe'>
         <Plx parallaxData={exampleParallaxData} className="plx">
             <p>"Every great design begins with an even better story." -- Lorinda Mamo</p>
             </Plx>

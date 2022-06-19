@@ -323,16 +323,37 @@ body {
   position: relative;
   width: 6rem;
   height: 6rem;
-  background-color: white;
-  border-radius: 1rem;
+  -webkit-transition: -webkit-filter 500ms;
+  transition: -webkit-filter 500ms;
+  transition: filter 500ms;
+  transition: filter 500ms, -webkit-filter 500ms;
 }
 
-.skillsCard img {
+.skillsCard:hover > .img-wrapper {
+  -webkit-filter: brightness(0.8);
+          filter: brightness(0.8);
+}
+
+.skillsCard .img-wrapper {
+  border-radius: 1rem;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.skillsCard .img-wrapper:hover > img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.skillsCard .img-wrapper img {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: inherit;
-  padding: 0.5em;
+  padding: 0.8em;
 }
 
 .skillsCard p {
@@ -345,7 +366,7 @@ body {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   color: white;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .skillsCard:hover > p {
@@ -647,5 +668,24 @@ body {
   margin-top: 2em;
   -webkit-box-shadow: 1px 0 0 1px #343434, 5px 0 0 1px #343434, 10px 0 0 1px #343434, 11px 0 0 1px #343434, 15px 0 0 1px #343434, 18px 0 0 1px #343434, 22px 0 0 1px #343434, 23px 0 0 1px #343434, 26px 0 0 1px #343434, 30px 0 0 1px #343434, 35px 0 0 1px #343434, 37px 0 0 1px #343434, 41px 0 0 1px #343434, 44px 0 0 1px #343434, 47px 0 0 1px #343434, 51px 0 0 1px #343434, 56px 0 0 1px #343434, 59px 0 0 1px #343434, 64px 0 0 1px #343434, 68px 0 0 1px #343434, 72px 0 0 1px #343434, 74px 0 0 1px #343434, 77px 0 0 1px #343434, 81px 0 0 1px #343434;
           box-shadow: 1px 0 0 1px #343434, 5px 0 0 1px #343434, 10px 0 0 1px #343434, 11px 0 0 1px #343434, 15px 0 0 1px #343434, 18px 0 0 1px #343434, 22px 0 0 1px #343434, 23px 0 0 1px #343434, 26px 0 0 1px #343434, 30px 0 0 1px #343434, 35px 0 0 1px #343434, 37px 0 0 1px #343434, 41px 0 0 1px #343434, 44px 0 0 1px #343434, 47px 0 0 1px #343434, 51px 0 0 1px #343434, 56px 0 0 1px #343434, 59px 0 0 1px #343434, 64px 0 0 1px #343434, 68px 0 0 1px #343434, 72px 0 0 1px #343434, 74px 0 0 1px #343434, 77px 0 0 1px #343434, 81px 0 0 1px #343434;
+}
+
+nav {
+  position: fixed;
+  z-index: 100;
+  left: 8rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+nav li {
+  list-style: none;
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem 0;
+  border-radius: 50%;
+  border: 0.2rem solid #e84c3d;
+  background-color: transparent;
 }
 /*# sourceMappingURL=App.css.map */
