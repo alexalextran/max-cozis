@@ -3,14 +3,13 @@ import Slider from "react-slick";
 import "../Sass&Css/index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import works from '../Works/index.js'
 import {worksobj} from '../Works/index.js'
 
 
 const MyWork = () => {
-var {img} = worksobj[0];
 
-console.log(worksobj[1].img[Object.keys(worksobj[1].img)[0]])
+
+
 
     var settings = {
         dots: true,

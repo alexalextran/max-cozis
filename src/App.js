@@ -7,11 +7,13 @@ import MyWork from './Components/MyWork';
 import Nav from './Components/Nav';
 import Values from './Components/Values';
 import './Sass&Css/App.css';
-
+import { AuthProvider } from "./Contexts/AuthContext";
+import Footer from './Components/footer';
 
 function App() {
   return (
     <>
+    <AuthProvider>
     <Nav/>
     <LandingPage/>
     <AboutMe/>
@@ -19,6 +21,8 @@ function App() {
     <MyWork />
     <Values />
     <Contact />
+    <Footer />
+    </AuthProvider>
     </>
   );
 }
