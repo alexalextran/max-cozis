@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/max-cozis/static/css/main.567322db.css",
-    "main.js": "/max-cozis/static/js/main.3ebd4db3.js",
+    "main.css": "/max-cozis/static/css/main.c3f2ebdb.css",
+    "main.js": "/max-cozis/static/js/main.05928a23.js",
     "static/js/787.db0fc8cc.chunk.js": "/max-cozis/static/js/787.db0fc8cc.chunk.js",
     "static/media/landingPage-MC.mp4": "/max-cozis/static/media/landingPage-MC.ee3d2963b96235bfb76f.mp4",
     "static/media/aboutme.jpg": "/max-cozis/static/media/aboutme.d2f452c4094e4b6c5c22.jpg",
@@ -21,12 +21,12 @@
     "static/media/slick.woff": "/max-cozis/static/media/slick.295183786cd8a1389865.woff",
     "static/media/Adobe_Illustrator.svg": "/max-cozis/static/media/Adobe_Illustrator.883c82bcfa8e4f39f33068e1165b94a6.svg",
     "index.html": "/max-cozis/index.html",
-    "main.567322db.css.map": "/max-cozis/static/css/main.567322db.css.map",
-    "main.3ebd4db3.js.map": "/max-cozis/static/js/main.3ebd4db3.js.map",
+    "main.c3f2ebdb.css.map": "/max-cozis/static/css/main.c3f2ebdb.css.map",
+    "main.05928a23.js.map": "/max-cozis/static/js/main.05928a23.js.map",
     "787.db0fc8cc.chunk.js.map": "/max-cozis/static/js/787.db0fc8cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.567322db.css",
-    "static/js/main.3ebd4db3.js"
+    "static/css/main.c3f2ebdb.css",
+    "static/js/main.05928a23.js"
   ]
 }
