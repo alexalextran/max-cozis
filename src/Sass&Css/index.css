@@ -1,0 +1,27 @@
+@import url("slick-carousel/slick/slick.css");
+@import url("slick-carousel/slick/slick-theme.css");
+
+.container {
+    padding: 40px;
+    background: #419be0;
+  }
+
+  
+  
+  .slick-slide div{
+    text-align: center;
+    margin: auto;
+    width: 550px;
+    background-color: aliceblue;
+  }
+
+  h1{
+    text-align: center;
+  }
+  
+  .slick-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+  }
