@@ -31,7 +31,7 @@
     align-items: center;
   }
 
-  p{
+  .works__text{
     height: 100%;
     width: 100%;
     position: absolute;
@@ -49,7 +49,7 @@
   .img:hover > img{
    filter:blur(0.4rem);
   }
-  .img:hover > p{
+  .img:hover > .works__text{
     opacity: 1;
     z-index: 1;
   }
@@ -89,9 +89,7 @@
   
  
 
-  h1{
-    text-align: center;
-  }
+ 
   
   .slick-center{
     display: flex;
