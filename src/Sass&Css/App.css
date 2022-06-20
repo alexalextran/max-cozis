@@ -688,4 +688,146 @@ nav li {
   border: 0.2rem solid #e84c3d;
   background-color: transparent;
 }
+
+.loginpage {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loginpage form {
+  width: 60%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 4rem;
+  background-color: #e84c3d;
+  color: white;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.loginpage form h1 {
+  padding-bottom: 1rem;
+}
+
+.loginpage form p {
+  width: 100%;
+}
+
+.loginpage form button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  -webkit-box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+          box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.loginpage form button:focus {
+  text-decoration: none;
+}
+
+.loginpage form button:hover {
+  text-decoration: none;
+  background-color: gray;
+}
+
+.loginpage form button:active {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+          box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.loginpage form button:not([disabled]):active {
+  -webkit-box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+          box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .loginpage form button .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+.loginpage form input, .loginpage form .contact textarea, .contact .loginpage form textarea {
+  color: white;
+  font-size: 1.4rem;
+  margin: 2rem;
+  width: 60rem;
+  color: black;
+  background-color: transparent;
+  width: 100%;
+  padding: 0.5em 0;
+  border: none;
+  outline: none;
+  -webkit-transition: border 500ms;
+  transition: border 500ms;
+  border-bottom: 2px solid #4b4848;
+  border-bottom: 2px solid black;
+}
+
+.loginpage form input:focus, .loginpage form .contact textarea:focus, .contact .loginpage form textarea:focus {
+  outline: none;
+  border-bottom: 2px solid #e84c3d;
+  resize: none;
+}
+
+.loginpage form input:focus, .loginpage form .contact textarea:focus, .contact .loginpage form textarea:focus {
+  border-bottom: white 2px solid;
+}
 /*# sourceMappingURL=App.css.map */

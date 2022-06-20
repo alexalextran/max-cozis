@@ -1,5 +1,6 @@
 import { useAuth } from '../Contexts/AuthContext';
 import React, {useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const { login, logout } = useAuth()
@@ -40,6 +41,7 @@ const Footer = () => {
 
     return (
         <div>
+             <Link to="/dashboard" className="button">dashboard</Link>
             <button disabled={loading} onClick={loginuser}>login</button>
             <button onClick={logoutUser}>logout</button>
         </div>
