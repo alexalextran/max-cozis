@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/max-cozis/static/css/main.c8791748.css",
-    "main.js": "/max-cozis/static/js/main.79c117ae.js",
+    "main.css": "/max-cozis/static/css/main.b5f108f6.css",
+    "main.js": "/max-cozis/static/js/main.b26f7c0d.js",
     "static/js/787.db0fc8cc.chunk.js": "/max-cozis/static/js/787.db0fc8cc.chunk.js",
     "static/media/landingPage-MC.mp4": "/max-cozis/static/media/landingPage-MC.ee3d2963b96235bfb76f.mp4",
     "static/media/aboutme.jpg": "/max-cozis/static/media/aboutme.d2f452c4094e4b6c5c22.jpg",
     "static/media/punpun-transparent.png": "/max-cozis/static/media/punpun-transparent.2086b919ccbc1e28cfb4.png",
     "static/media/ProCreate.png": "/max-cozis/static/media/ProCreate.5243ff5225390f9b647e.png",
     "static/media/perspective.svg": "/max-cozis/static/media/perspective.cf69d2134f970442184e741ecabf9fb2.svg",
+    "static/media/slick.svg": "/max-cozis/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/Concept_Art.svg": "/max-cozis/static/media/Concept_Art.9e7beeb5e24738797b5bf5c253f87b45.svg",
+    "static/media/slick.eot": "/max-cozis/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/max-cozis/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/ColorTheory.svg": "/max-cozis/static/media/ColorTheory.2124b040f1cffe9959781da34171ec1c.svg",
     "static/media/pencil.svg": "/max-cozis/static/media/pencil.575494f5d6ef263fc2c367291eaec434.svg",
     "static/media/Photoshop.svg": "/max-cozis/static/media/Photoshop.4a391b7067e054e5d86cf57fa1723159.svg",
+    "static/media/slick.woff": "/max-cozis/static/media/slick.295183786cd8a1389865.woff",
     "static/media/Adobe_Illustrator.svg": "/max-cozis/static/media/Adobe_Illustrator.883c82bcfa8e4f39f33068e1165b94a6.svg",
     "index.html": "/max-cozis/index.html",
-    "main.c8791748.css.map": "/max-cozis/static/css/main.c8791748.css.map",
-    "main.79c117ae.js.map": "/max-cozis/static/js/main.79c117ae.js.map",
+    "main.b5f108f6.css.map": "/max-cozis/static/css/main.b5f108f6.css.map",
+    "main.b26f7c0d.js.map": "/max-cozis/static/js/main.b26f7c0d.js.map",
     "787.db0fc8cc.chunk.js.map": "/max-cozis/static/js/787.db0fc8cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8791748.css",
-    "static/js/main.79c117ae.js"
+    "static/css/main.b5f108f6.css",
+    "static/js/main.b26f7c0d.js"
   ]
 }
