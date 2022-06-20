@@ -2,18 +2,92 @@
 @import url("slick-carousel/slick/slick-theme.css");
 
 .container {
-    padding: 40px;
-    background: #419be0;
+    padding: 5rem;
+    background: white;
+    height: fit-content;
+    text-align: center;
+  }
+
+  .slick-slide div{
+    width: fit-content ;
+    text-align: center;
+    margin: auto;
+    background-color: transparent;
+  }
+
+  .slick-slide img{
+    z-index: 100 !important;
+ height: 30rem !important;
+ width: auto !important;
+ z-index: 100 !important;
+ transition: all 500ms;
+  }
+
+  .img{
+    position: relative;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  p{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    z-index: 0;
+    transition: all 500ms;
+  }
+
+  .img:hover > img{
+   filter:blur(0.4rem);
+  }
+  .img:hover > p{
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .slick-slide .slick-active .slick-center .slick-current{
+    display: flex  !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+   .slick-arrow .slick-next, .slick-arrow .slick-prev, .slick-next:before, .slick-prev:before{
+    width: fit-content !important;
+    height: fit-content !important;
+    color: black !important;
+    font-size: 4rem !important;
+  
+  }
+ .slick-next{
+    margin-right: 15% !important;
+    width: fit-content !important;
+    height: fit-content !important; 
+  }
+  .slick-prev{
+    width: fit-content !important;
+    height: fit-content !important; 
+    z-index: 100 !important;
+    margin-left: 15% !important;
   }
 
   
-  
-  .slick-slide div{
-    text-align: center;
-    margin: auto;
-    width: 550px;
-    background-color: aliceblue;
+
+  .slick-arrow .slick-next{
+    background-color: black;
+    background: black;
+    color: black;
   }
+  
+ 
 
   h1{
     text-align: center;
@@ -23,5 +97,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid black;
   }

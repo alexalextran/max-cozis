@@ -3,37 +3,31 @@ import Slider from "react-slick";
 import "../Sass&Css/index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import works from '../Works/index.js'
 
 
 const MyWork = () => {
     var settings = {
         dots: true,
         centerMode: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         
       };
       return (
         <div className="container">
+            My works
         <Slider {...settings}>
          
-        <div>
-        <h3>Slide1</h3>
-      </div>
-      <div>
-        <h3>Slide2</h3>
-      </div>
-      <div>
-        <h3>Slide3</h3>
-      </div>
-      <div>
-        <h3>Slide4</h3>
-      </div>
-      <div>
-        <h3>Slide5</h3>
-      </div>
-      <div>
-        <h3>Slide6</h3>
-      </div>
+        {
+            works.map((img, index) =>{
+                    return <div className='img'>
+                        <p>
+                            Hi i am text   Hi i am text   Hi i am text   Hi i am text   Hi i am text   Hi i am text   Hi i am text   Hi i am text   Hi i am text   Hi i am text   Hi i am text 
+                        </p>
+                        <img src={img}  alt="my drawings"></img>
+                        </div>
+                   }) 
+                }
        
         </Slider>
       </div>
