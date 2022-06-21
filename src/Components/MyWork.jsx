@@ -3,12 +3,11 @@ import Slider from "react-slick";
 import "../Sass&Css/index.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import {worksobj} from '../Works/index.js'
 import { useState } from 'react';
 import { collection,getFirestore, getDocs  } from "firebase/firestore"; 
 
 const MyWork = () => {
-  const [works, setworks] = useState([])
+  const [works] = useState([])
   const [loading, setloading] = useState(true)
   const db = getFirestore();
   const colRef = collection(db, 'works')
@@ -28,7 +27,7 @@ useEffect(() => {
       .catch(err => {
           console.log(err.message)
   })
-}, []);
+}, [colRef, works]);
   
 
 
