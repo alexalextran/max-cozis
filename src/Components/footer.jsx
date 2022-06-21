@@ -42,8 +42,6 @@ const Footer = () => {
     return (
         <div>
              <Link to="/dashboard" className="button">dashboard</Link>
-            <button disabled={loading} onClick={loginuser}>login</button>
-            <button onClick={logoutUser}>logout</button>
         </div>
     );
 }

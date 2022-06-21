@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useAuth } from '../Contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     const navigate = useNavigate()
@@ -34,14 +35,15 @@ const Login = () => {
 
     return (
         <section className='loginpage'>
-            <form>
+            <form onSubmit={loginuser}>
                 <h1>Login</h1>
             <p>Email</p>
-            <input name="email" value={email} onChange={e => setemail(e.target.value)}></input>
+            <input name="email" required value={email} onChange={e => setemail(e.target.value)}></input>
             <p>Password</p>
-            <input name="password" type="password" value={password} onChange={e => setpassword(e.target.value)}></input>
-            <button disabled={loading} onClick={loginuser}>Login</button>
+            <input name="password" required type="password" value={password} onChange={e => setpassword(e.target.value)}></input>
+            <button disabled={loading}>Login</button>
             </form>
+            <Link to="/" className="button">Home</Link>
         </section>
     );
 }

@@ -20,6 +20,7 @@ body {
   overflow-x: hidden;
 }
 
+
 //LANDINGPAGE
 .video-header {
   position: relative;
@@ -415,6 +416,7 @@ nav{
   @include fullScreen;
   @include flexCenter(column);
   form{
+    margin-bottom: 2rem;
     width: 60%;
     height: fit-content;
     padding: 4rem;
@@ -458,6 +460,12 @@ nav{
   margin: 0 auto;
   width: 80%;
   h1{
+    position: relative;
+    button{
+      position: absolute;
+      right: 1rem;
+      @include button;
+    }
     padding: 1rem 2rem;
     width: 100%;
     text-align: center;

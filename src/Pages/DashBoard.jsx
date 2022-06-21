@@ -95,7 +95,7 @@ const DashBoard = () => {
     }
     return (
         <section className='dashboard'>
-            <h1>Dashboard</h1>
+            <h1>Dashboard  <button onClick={logoutUser}>logout</button></h1>
 
             <div className='dashboard__main'>
                 <div>
@@ -104,10 +104,10 @@ const DashBoard = () => {
                    })}
                 </div>
                 <div>
-                <form>
+                <form onSubmit={handleSubmit}>
                 <h2>{ ID ? "Editing Works" : "Adding Works"}</h2>
             <p>Description</p>
-            <textarea name="description" value={description} onChange={e => setdescription(e.target.value)}></textarea>
+            <textarea required name="description" value={description} onChange={e => setdescription(e.target.value)}></textarea>
             <p>File</p>
             <FileBase 
             type="file"
@@ -122,7 +122,7 @@ const DashBoard = () => {
             </div>
 
 
-            <button onClick={logoutUser}>logout</button>
+           
         </section>
     );
 }

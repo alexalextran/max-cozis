@@ -708,6 +708,7 @@ nav li {
 }
 
 .loginpage form {
+  margin-bottom: 2rem;
   width: 60%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -855,6 +856,7 @@ nav li {
 }
 
 .dashboard h1 {
+  position: relative;
   padding: 1rem 2rem;
   width: 100%;
   text-align: center;
@@ -862,6 +864,72 @@ nav li {
   border-radius: 1rem;
   background-color: #e84c3d;
   margin-bottom: 2rem;
+}
+
+.dashboard h1 button {
+  position: absolute;
+  right: 1rem;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: #fff 0.17rem 0.17rem 0 0,#000 0.17rem 0.17rem 0 0.1rem;
+          box-shadow: #fff 0.17rem 0.17rem 0 0,#000 0.17rem 0.17rem 0 0.1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0 0.2rem 0.5rem 0;
+  overflow: visible;
+  padding: 0.4rem 2rem;
+  text-align: center;
+  text-transform: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.dashboard h1 button:focus {
+  text-decoration: none;
+}
+
+.dashboard h1 button:hover {
+  text-decoration: none;
+  background-color: gray;
+}
+
+.dashboard h1 button:active {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+          box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.dashboard h1 button:not([disabled]):active {
+  -webkit-box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+          box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .dashboard h1 button .button-50 {
+    padding: 12px 50px;
+  }
 }
 
 .dashboard .dashboard__main {
