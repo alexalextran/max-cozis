@@ -3,7 +3,7 @@ import { useAuth } from '../Contexts/AuthContext';
 import React from 'react';
 import { useState } from 'react';
 import FileBase from 'react-file-base64'
-import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore"; 
+import { collection, addDoc, getFirestore, getDocs, onSnapshot, doc  } from "firebase/firestore"; 
 import { useEffect } from 'react';
 import WorksCard from '../UI/WorksCard';
 
@@ -11,32 +11,35 @@ import WorksCard from '../UI/WorksCard';
   
 
 const DashBoard = () => {
+
+  
+
     const {logout } = useAuth()
     const db = getFirestore();
     const colRef = collection(db, 'works')
     const [description, setdescription] = useState("")
     const [img, setimg] = useState("")
-    const [works] = useState([])
+    const [works, setworks] = useState([])
     const [loading, setloading] = useState(true)
 
+    
+
     useEffect(() => {
-        getDocs(colRef)
-        .then((snapshot) => {
-          
-            snapshot.docs.forEach((doc) => {
-             works.push({
-                ID: doc.id,
-                 ...doc.data(),
-             })})
-            setloading(false)
+        const unsub = onSnapshot(collection(db, "works"), (snapshot) => {
+        setworks(snapshot.docs.map(doc => ({
+
+            ID: doc.id,
+            ...doc.data(),
            
-            })
-            .catch(err => {
-                console.log(err.message)
-        })
+        })))
+        setloading(false)})
+
+
         console.log(works)
          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+  
 
 
     const handleSubmit = async (e) => {
@@ -48,7 +51,7 @@ const DashBoard = () => {
             Image: img
           })  
           console.log("document added")
-          document.location.reload()
+         
         } catch(e){
             console.log(e)
             window.alert("Something went wrong, contact alex")

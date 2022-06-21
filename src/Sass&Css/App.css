@@ -885,6 +885,7 @@ nav li {
   text-align: center;
   width: 15rem;
   margin: 0 1rem;
+  margin-bottom: 1rem;
   padding-bottom: 1rem;
   height: -webkit-fit-content;
   height: -moz-fit-content;

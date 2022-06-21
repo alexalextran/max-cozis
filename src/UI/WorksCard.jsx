@@ -9,7 +9,6 @@ const WorksCard = ({imgobj}) => {
         try{
          await deleteDoc(doc(db, "works", `${imgobj.ID}`));
          console.log("deleted")
-         document.location.reload()
         } catch(e){
             console.log(e)
         }
