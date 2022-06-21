@@ -3,7 +3,7 @@ import { useAuth } from '../Contexts/AuthContext';
 import React from 'react';
 import { useState } from 'react';
 import FileBase from 'react-file-base64'
-import { collection, addDoc, getFirestore, getDocs, onSnapshot, doc  } from "firebase/firestore"; 
+import { collection, addDoc, getFirestore, onSnapshot, updateDoc, doc  } from "firebase/firestore"; 
 import { useEffect } from 'react';
 import WorksCard from '../UI/WorksCard';
 
@@ -11,12 +11,9 @@ import WorksCard from '../UI/WorksCard';
   
 
 const DashBoard = () => {
-
-  
-
+    const [ID, setID] = useState("");
     const {logout } = useAuth()
     const db = getFirestore();
-    const colRef = collection(db, 'works')
     const [description, setdescription] = useState("")
     const [img, setimg] = useState("")
     const [works, setworks] = useState([])
@@ -25,7 +22,7 @@ const DashBoard = () => {
     
 
     useEffect(() => {
-        const unsub = onSnapshot(collection(db, "works"), (snapshot) => {
+        onSnapshot(collection(db, "works"), (snapshot) => {
         setworks(snapshot.docs.map(doc => ({
 
             ID: doc.id,
@@ -35,7 +32,7 @@ const DashBoard = () => {
         setloading(false)})
 
 
-        console.log(works)
+     
          // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
@@ -45,17 +42,39 @@ const DashBoard = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         
-        try{
-          await addDoc(collection(db, "works"), {
-            Description: description,
-            Image: img
-          })  
-          console.log("document added")
+
+        if(ID == null){
+            try{
+                await addDoc(collection(db, "works"), {
+                  Description: description,
+                  Image: img
+                })  
+                console.log("document added")
+               
+              } catch(e){
+                  console.log(e)
+                  window.alert("Something went wrong, contact alex")
+              }  
+        }
+        else{
+            try{
+                await updateDoc(doc(db, "works", `${ID}`), {
+                  Description: description,
+                })  
+                console.log("document updated")
+              } catch(e){
+                  console.log(e)
+                  window.alert("Something went wrong, contact alex")
+              }  
+        }
          
-        } catch(e){
-            console.log(e)
-            window.alert("Something went wrong, contact alex")
-        }   
+    }
+
+
+    const handleClear = (e) => {
+        e.preventDefault()
+        setID()
+        setdescription("")
     }
 
 
@@ -81,12 +100,12 @@ const DashBoard = () => {
             <div className='dashboard__main'>
                 <div>
                 {loading ?  <p>Loading</p> :  works.map((imgobj) =>{
-                     return   <WorksCard key={imgobj.ID} imgobj={imgobj}/>
+                     return   <WorksCard key={imgobj.ID} imgobj={imgobj} setID={setID} setdescription={setdescription}/>
                    })}
                 </div>
                 <div>
-                <form onSubmit={handleSubmit}>
-                <h2>Add Works</h2>
+                <form>
+                <h2>{ ID ? "Editing Works" : "Adding Works"}</h2>
             <p>Description</p>
             <textarea name="description" value={description} onChange={e => setdescription(e.target.value)}></textarea>
             <p>File</p>
@@ -95,8 +114,10 @@ const DashBoard = () => {
             multiple={false}
             onDone={({base64})=>  setimg(base64)}
             />
-            <button>Add</button>
+            <button onClick={handleSubmit}>{ID ? "Edit" : "Add"}</button>
+            <button onClick={handleClear}>Clear</button>
             </form>
+           
                 </div>
             </div>
 
