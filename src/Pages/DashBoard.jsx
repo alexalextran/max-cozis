@@ -3,7 +3,9 @@ import { useAuth } from '../Contexts/AuthContext';
 import React from 'react';
 import { useState } from 'react';
 import FileBase from 'react-file-base64'
-import { collection, addDoc, getFirestore, doc } from "firebase/firestore"; 
+import { collection, addDoc, getFirestore, getDocs } from "firebase/firestore"; 
+import { useEffect } from 'react';
+import WorksCard from '../UI/WorksCard';
 
 
   
@@ -11,31 +13,53 @@ import { collection, addDoc, getFirestore, doc } from "firebase/firestore";
 const DashBoard = () => {
     const {logout } = useAuth()
     const db = getFirestore();
+    const colRef = collection(db, 'works')
     const [description, setdescription] = useState("")
     const [img, setimg] = useState("")
+    const [works] = useState([])
+    const [loading, setloading] = useState(true)
 
-    const handleSubmit = (e) => {
+    useEffect(() => {
+        getDocs(colRef)
+        .then((snapshot) => {
+          
+            snapshot.docs.forEach((doc) => {
+             works.push({
+                ID: doc.id,
+                 ...doc.data(),
+             })})
+            setloading(false)
+           
+            })
+            .catch(err => {
+                console.log(err.message)
+        })
+        console.log(works)
+         // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
+
+    const handleSubmit = async (e) => {
         e.preventDefault()
         
         try{
-          addDoc(collection(db, "works"), {
+          await addDoc(collection(db, "works"), {
             Description: description,
             Image: img
           })  
+          console.log("document added")
+          document.location.reload()
         } catch(e){
             console.log(e)
             window.alert("Something went wrong, contact alex")
-        }
-        
-    
-         
-         
+        }   
     }
+
+
     
 
     async function logoutUser(e){
         e.preventDefault()
-
         try{
           
          await logout()
@@ -53,9 +77,9 @@ const DashBoard = () => {
 
             <div className='dashboard__main'>
                 <div>
-                card 
-                card
-                card
+                {loading ?  <p>Loading</p> :  works.map((imgobj) =>{
+                     return   <WorksCard key={imgobj.ID} imgobj={imgobj}/>
+                   })}
                 </div>
                 <div>
                 <form onSubmit={handleSubmit}>

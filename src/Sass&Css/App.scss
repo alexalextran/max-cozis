@@ -453,9 +453,10 @@ nav{
 
 .dashboard{
   @include fullScreen;
+  height: fit-content;
   @include flexCustom(top, center, column);
   margin: 0 auto;
-  width: 60%;
+  width: 80%;
   h1{
     padding: 1rem 2rem;
     width: 100%;
@@ -466,17 +467,39 @@ nav{
     margin-bottom: 2rem;
   }
   .dashboard__main{
+    .card{
+      text-align: center;
+      width: 15rem;
+      margin: 0 1rem;
+      padding-bottom: 1rem;
+      height: fit-content;
+      background-color: rgb(230, 230, 230);
+      color: black;
+      box-shadow: 0 0.4rem 0.8rem 0 rgba(0,0,0,0.2);
+      .card__buttons{
+        width: 100%;
+        display: flex;
+        padding: 1rem 1rem 0 1rem;
+        justify-content: space-between;
+        font-size: 1.5rem;
+      }
+      img{
+        width: inherit;
+      }
+    }
     @include flexCustom(space-between, top, row);
     width: 100%;
-    div{
-      border: 2px solid black;
-    }
+  
     & > div:nth-child(1){
-      width: 60%;
+      flex-wrap: wrap;
+     display: flex;
+     flex-direction: row;
+      width: 70%;
     }
     & > div:nth-child(2){
       width: 30%;
       form{
+        border: 2px solid black;
         font-size: 1.6rem;
         padding: 1rem;
         @include flexCenter(column);
