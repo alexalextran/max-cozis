@@ -538,7 +538,7 @@ body {
   margin: 1em 0;
 }
 
-.contact input, .contact textarea {
+.contact input, .contact textarea, .contact .dashboard .dashboard__main > div:nth-child(2) form textarea, .dashboard .dashboard__main > div:nth-child(2) form .contact textarea {
   color: black;
   background-color: transparent;
   width: 100%;
@@ -552,7 +552,7 @@ body {
   margin-bottom: 0.5em;
 }
 
-.contact input:focus, .contact textarea:focus {
+.contact input:focus, .contact textarea:focus, .contact .dashboard .dashboard__main > div:nth-child(2) form textarea:focus, .dashboard .dashboard__main > div:nth-child(2) form .contact textarea:focus {
   outline: none;
   border-bottom: 2px solid #e84c3d;
   resize: none;
@@ -804,7 +804,7 @@ nav li {
   }
 }
 
-.loginpage form input, .loginpage form .contact textarea, .contact .loginpage form textarea {
+.loginpage form input, .loginpage form .contact textarea, .contact .loginpage form textarea, .loginpage .dashboard .dashboard__main > div:nth-child(2) form textarea, .dashboard .dashboard__main > div:nth-child(2) .loginpage form textarea {
   color: white;
   font-size: 1.4rem;
   margin: 2rem;
@@ -821,13 +821,168 @@ nav li {
   border-bottom: 2px solid black;
 }
 
-.loginpage form input:focus, .loginpage form .contact textarea:focus, .contact .loginpage form textarea:focus {
+.loginpage form input:focus, .loginpage form .contact textarea:focus, .contact .loginpage form textarea:focus, .loginpage .dashboard .dashboard__main > div:nth-child(2) form textarea:focus, .dashboard .dashboard__main > div:nth-child(2) .loginpage form textarea:focus {
   outline: none;
   border-bottom: 2px solid #e84c3d;
   resize: none;
 }
 
-.loginpage form input:focus, .loginpage form .contact textarea:focus, .contact .loginpage form textarea:focus {
+.loginpage form input:focus, .loginpage form .contact textarea:focus, .contact .loginpage form textarea:focus, .loginpage .dashboard .dashboard__main > div:nth-child(2) form textarea:focus, .dashboard .dashboard__main > div:nth-child(2) .loginpage form textarea:focus {
   border-bottom: white 2px solid;
+}
+
+.dashboard {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: top;
+      -ms-flex-pack: top;
+          justify-content: top;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.dashboard h1 {
+  padding: 1rem 2rem;
+  width: 100%;
+  text-align: center;
+  margin-top: 4rem;
+  border-radius: 1rem;
+  background-color: #e84c3d;
+  margin-bottom: 2rem;
+}
+
+.dashboard .dashboard__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.dashboard .dashboard__main div {
+  border: 2px solid black;
+}
+
+.dashboard .dashboard__main > div:nth-child(1) {
+  width: 60%;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) {
+  width: 30%;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form {
+  font-size: 1.6rem;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form button {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  -webkit-box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+          box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: ITCAvantGardeStd-Bk,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-transition: background-color 500ms;
+  transition: background-color 500ms;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form button:focus {
+  text-decoration: none;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form button:hover {
+  text-decoration: none;
+  background-color: gray;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form button:active {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+          box-shadow: rgba(0, 0, 0, 0.125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form button:not([disabled]):active {
+  -webkit-box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+          box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  -webkit-transform: translate(2px, 2px);
+          transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .dashboard .dashboard__main > div:nth-child(2) form button .button-50 {
+    padding: 12px 50px;
+  }
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form > * {
+  margin-bottom: 1rem;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form textarea {
+  border: 2px solid black !important;
+  height: 10rem;
+  padding: 0.4rem !important;
+}
+
+.dashboard .dashboard__main > div:nth-child(2) form input, .dashboard .dashboard__main > div:nth-child(2) form textarea {
+  width: 100%;
 }
 /*# sourceMappingURL=App.css.map */

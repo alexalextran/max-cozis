@@ -447,3 +447,55 @@ nav{
     @include flexCenter(column);
   }
 }
+
+
+//dashboard
+
+.dashboard{
+  @include fullScreen;
+  @include flexCustom(top, center, column);
+  margin: 0 auto;
+  width: 60%;
+  h1{
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 4rem;
+    border-radius: 1rem;
+    background-color: #e84c3d;
+    margin-bottom: 2rem;
+  }
+  .dashboard__main{
+    @include flexCustom(space-between, top, row);
+    width: 100%;
+    div{
+      border: 2px solid black;
+    }
+    & > div:nth-child(1){
+      width: 60%;
+    }
+    & > div:nth-child(2){
+      width: 30%;
+      form{
+        font-size: 1.6rem;
+        padding: 1rem;
+        @include flexCenter(column);
+        button{
+          @include button;
+        }
+        &>*{
+          margin-bottom: 1rem;
+        }
+        textarea{
+          @include textarea;
+          border: 2px solid black !important;
+          height: 10rem;
+          padding: 0.4rem !important;
+        }
+        input{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -21,11 +21,12 @@ const Login = () => {
          await login(email, password)
          navigate("/dashboard");
 
-        } catch{
+        } catch(e){
+            console.log(e)
             window.alert("Failed To sign in! Please try again")
+            setemail("")
+            setpassword("")
         }
-        setemail("")
-        setpassword("")
         setloading(false)
         
     }

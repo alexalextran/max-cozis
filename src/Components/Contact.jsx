@@ -24,7 +24,7 @@ var time = today.getHours() + ":" + today.getMinutes();
       <span>Director</span>
     </div>
     <div className='description'>
-       <textarea placeholder='Message...'></textarea> 
+       <textarea className='description__textarea' placeholder='Message...'></textarea> 
        <span>Description</span>
     </div>
     <div className="button">
