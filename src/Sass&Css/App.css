@@ -375,9 +375,12 @@ body {
 }
 
 .mywork {
+  font-size: 1vw;
   width: 100vw;
   height: 100vh;
-  height: 70vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -392,6 +395,66 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.galleryMode {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.galleryMode .galleryCard {
+  margin: 1em;
+  height: 18em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+
+.galleryMode .galleryCard:hover > img {
+  -webkit-filter: blur(0.3em);
+          filter: blur(0.3em);
+}
+
+.galleryMode .galleryCard:hover > P {
+  z-index: 2;
+  opacity: 1;
+}
+
+.galleryMode .galleryCard p {
+  font-size: 0.8em;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  color: white;
+  padding: 1em;
+  z-index: -1;
+  opacity: 0;
+}
+
+.galleryMode .galleryCard img {
+  -webkit-transition: -webkit-filter 300ms;
+  transition: -webkit-filter 300ms;
+  transition: filter 300ms;
+  transition: filter 300ms, -webkit-filter 300ms;
+  height: inherit;
 }
 
 .values {
@@ -1092,5 +1155,67 @@ nav li {
 
 .dashboard .dashboard__main > div:nth-child(2) form input, .dashboard .dashboard__main > div:nth-child(2) form textarea {
   width: 100%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.4rem;
+  height: 1.9rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input, .switch .contact textarea, .contact .switch textarea, .switch .dashboard .dashboard__main > div:nth-child(2) form textarea, .dashboard .dashboard__main > div:nth-child(2) form .switch textarea {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5rem;
+  width: 1.5rem;
+  left: 0.2rem;
+  bottom: 0.2rem;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider, .contact textarea:checked + .slider, .dashboard .dashboard__main > div:nth-child(2) form textarea:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider, .contact textarea:focus + .slider, .dashboard .dashboard__main > div:nth-child(2) form textarea:focus + .slider {
+  -webkit-box-shadow: 0 0 0.1rem #2196F3;
+          box-shadow: 0 0 0.1rem #2196F3;
+}
+
+input:checked + .slider:before, .contact textarea:checked + .slider:before, .dashboard .dashboard__main > div:nth-child(2) form textarea:checked + .slider:before {
+  -webkit-transform: translateX(1.5rem);
+  transform: translateX(1.5rem);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 1rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 /*# sourceMappingURL=App.css.map */

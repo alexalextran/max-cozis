@@ -11,7 +11,7 @@ import WorksCard from '../UI/WorksCard';
   
 
 const DashBoard = () => {
-    const [ID, setID] = useState("");
+    const [ID, setID] = useState();
     const {logout } = useAuth()
     const db = getFirestore();
     const [description, setdescription] = useState("")

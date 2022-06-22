@@ -5,14 +5,17 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from 'react';
 import { collection,getFirestore, getDocs  } from "firebase/firestore"; 
+import GalleryCard from '../UI/GalleryCard';
 
 const MyWork = () => {
   const [works] = useState([])
   const [loading, setloading] = useState(true)
   const db = getFirestore();
   const colRef = collection(db, 'works')
+  const [gallery, setgallery] = useState(false)
 
 useEffect(() => {
+  console.log(gallery)
   getDocs(colRef)
   .then((snapshot) => {
     
@@ -27,7 +30,8 @@ useEffect(() => {
       .catch(err => {
           console.log(err.message)
   })
-}, [colRef, works]);
+       // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
   
 
 
@@ -40,6 +44,17 @@ useEffect(() => {
       return (
         <div className="container">
             My works
+
+        <label className="switch">
+      <input type="checkbox" onChange={() => setgallery(!gallery) }></input>
+      <span className="slider round"></span>
+        </label>
+        {gallery ?  
+        <div className='galleryMode'>
+          {works.map((imgobj, index) => <GalleryCard imgobj={imgobj} key={index}/>)}
+        </div>
+          
+          : 
         <Slider {...settings}>
          
         {  loading ?  <p>Loading</p> :  
@@ -54,6 +69,7 @@ useEffect(() => {
                 }
        
         </Slider>
+}
       </div>
       );
 }
