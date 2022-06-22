@@ -17,10 +17,8 @@ const MyWork = () => {
   const [gallery, setgallery] = useState(false)
 
 useEffect(() => {
-  console.log(gallery)
   getDocs(colRef)
   .then((snapshot) => {
-    
       snapshot.docs.forEach((doc) => {
        works.push({
           ID: doc.id,

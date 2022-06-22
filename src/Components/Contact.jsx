@@ -1,16 +1,60 @@
 import React from 'react';
 import logo from '../Assets/punpun-transparent.png'
+import Plx from "react-plx";
 
 const Contact = () => {
+
+
+  const exampleParallaxData = [
+    {
+      start: 'self',
+      duration: '50vh',
+      properties: [
+        {
+          startValue: 0,
+          endValue: 1,
+          property: "opacity"
+        },
+        {
+          startValue: 100,
+          endValue: 0,
+          property: "translateY"
+        },
+      ]
+    }
+  ];
+  const title = [
+    {
+      start: 'self',
+      duration: '30vh',
+      properties: [
+        {
+          startValue: 0,
+          endValue: 1,
+          property: "opacity"
+        },
+        {
+          startValue: -300,
+          endValue: 0,
+          property: "translateX"
+        },
+      ]
+    }
+  ];
 
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes();
 
     return (
         <section className='contact'>
-
-            <h2 className='contact__title'>Don't Be Afrait To Send Me A Message!
+             
+             <Plx parallaxData={title} className="plx">
+            <h2 className='contact__title'>
+              Don't Be Afrait To Send Me A Message!
             </h2>
+            </Plx>
+
+            <Plx parallaxData={exampleParallaxData} className="plx">
 <div>
   <div className="card cardLeft">
     <form>
@@ -51,6 +95,7 @@ var time = today.getHours() + ":" + today.getMinutes();
     <div className="barcode"></div>
   </div>
   </div>
+  </Plx>
 
 
         </section>

@@ -20,6 +20,10 @@ body {
   overflow-x: hidden;
 }
 
+section{
+  overflow-y: hidden;
+}
+
 
 //LANDINGPAGE
 .video-header {
@@ -115,7 +119,7 @@ body {
       height: 21em;
      }
      margin: 2em 0;
-      width: 50%;
+      width: 100%;
      height: 100%;
     }
 }
@@ -290,6 +294,7 @@ body {
 //CONTACT
 
 .contact{
+  font-family:  "Inter", sans-serif;
   @include fullScreen;
   height: fit-content;
   padding: 4em;
@@ -298,6 +303,10 @@ body {
   $red: #e84c3d;
 $grey: #ecedef;
 $black: #343434;
+
+.contact__title{
+  margin-bottom: 2rem;
+}
 
 .card {
   background: linear-gradient(to bottom, $red 0%, $red 26%, $grey 26%, $grey 100%);
