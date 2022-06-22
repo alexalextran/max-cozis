@@ -23,6 +23,7 @@
   }
 
   .img{
+    
     position: relative;
     text-align: center !important;
     display: flex;
@@ -41,7 +42,7 @@
     color: white;
     font-size: 1.5rem;
     opacity: 0;
-    z-index: -1;
+    z-index: 2;
     transition: all 500ms;
   }
 
@@ -50,7 +51,7 @@
   }
   .img:hover > .works__text{
     opacity: 1;
-    z-index: 2;
+
   }
 
   .slick-slide .slick-active .slick-center .slick-current{

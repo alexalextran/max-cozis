@@ -24,8 +24,8 @@ const WorksCard = ({imgobj, setID, setdescription }) => {
         <div className='card'>
             <img src={imgobj.Image} alt="worksimage"></img>
                 <div className='card__buttons'>
-                    <MdDelete onClick={deleteWork}/>
-                    <RiEdit2Line onClick={() => {
+                    <MdDelete onClick={deleteWork} className="card__button"/>
+                    <RiEdit2Line className="card__button" onClick={() => {
                         setdescription(imgobj.Description)
                         setID(imgobj.ID)}}/>
                 </div>

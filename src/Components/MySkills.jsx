@@ -24,7 +24,7 @@ const MySkills = () => {
     return (
         <section className='skills' onMouseMove={moveBackground}>
             <div className='skills__left skill_d'>
-                <h1>What I'm Profecient With</h1>
+                <h1>What I'm Proficient With</h1>
                 <div className='cards'>
                 {
                    skills_proffecient.map((skill, index) =>{

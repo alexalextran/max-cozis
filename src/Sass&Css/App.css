@@ -1072,6 +1072,10 @@ nav li {
   font-size: 1.5rem;
 }
 
+.dashboard .dashboard__main .card .card__buttons .card__button:hover {
+  cursor: pointer;
+}
+
 .dashboard .dashboard__main .card img {
   width: inherit;
 }
