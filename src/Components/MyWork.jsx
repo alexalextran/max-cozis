@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { useState } from 'react';
 import { collection,getFirestore, getDocs  } from "firebase/firestore"; 
 import GalleryCard from '../UI/GalleryCard';
+import MyWorks from '../UI/MyWorks';
+import { useTransition, animated } from 'react-spring';
 
 const MyWork = () => {
   const [works] = useState([])
@@ -39,37 +41,52 @@ useEffect(() => {
         dots: true,
         centerMode: true,
         slidesToShow: 1,
-        
       };
+      
+      const transition = useTransition(gallery, {
+        from:{x: 0, y: -10, opacity: 0},
+        enter:{x: 0, y: 0, opacity: 1},
+        laeve:{x: 0, y: 10, opacity: 0},
+       
+    })
       return (
         <div className="container">
-            My works
-
-        <label className="switch">
+           <div className='myworks__header'>
+            <h1>My Works</h1>
+            <h3>Gallery Mode</h3>
+            
+            <label className="switch">
       <input type="checkbox" onChange={() => setgallery(!gallery) }></input>
       <span className="slider round"></span>
         </label>
-        {gallery ?  
-        <div className='galleryMode'>
+            </div>
+
+      
+        {gallery ?
+        <>
+          {transition((style, item) =>
+            <animated.span style = {style}> 
+          <div className='galleryMode'>
           {works.map((imgobj, index) => <GalleryCard imgobj={imgobj} key={index}/>)}
         </div>
-          
+            </animated.span>
+            )}
+        </>
+      
+    
           : 
-        <Slider {...settings}>
-         
-        {  loading ?  <p>Loading</p> :  
-            works.map((imgobj, index) =>{
-                    return <div className='img' key={index}>
-                        <p className='works__text'>
-                           {imgobj.Description}
-                        </p>
-                        <img src={imgobj.Image}  alt="my drawings"></img>
-                        </div>
-                   }) 
-                }
-       
+          <>
+          {transition((style, item) =>
+            <animated.span style = {style}> 
+          <Slider {...settings}>
+        { loading ? <p>Loading</p> :  works.map((imgobj, index) => <MyWorks imgobj={imgobj} key={index}/>)}
         </Slider>
-}
+            </animated.span>
+            )}
+            </>
+  
+        }
+        
       </div>
       );
 }

@@ -397,6 +397,37 @@ body {
           flex-direction: column;
 }
 
+.myworks__header {
+  padding-bottom: 1rem;
+}
+
+.myworks__header h1, .myworks__header h3 {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0.8rem;
+}
+
+.myworks__header h1 {
+  margin-bottom: 2rem;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .galleryMode {
   width: 100%;
   height: 100%;
@@ -418,6 +449,8 @@ body {
 }
 
 .galleryMode .galleryCard {
+  -webkit-animation: fade 500ms linear ease;
+          animation: fade 500ms linear ease;
   margin: 1em;
   height: 18em;
   width: -webkit-fit-content;

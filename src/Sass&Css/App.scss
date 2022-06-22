@@ -209,6 +209,28 @@ body {
   @include flexCenter(column)
 }
 
+.myworks__header{
+  padding-bottom: 1rem;
+  h1, h3{
+    font-family:  "Inter", sans-serif;
+    margin-bottom: 0.8rem;
+  }
+  h1{
+    margin-bottom: 2rem;
+  }
+
+ 
+  
+}
+
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+ }
 
 .galleryMode{
   width: 100%;
@@ -216,6 +238,7 @@ body {
   @include flexCenter(row);
   flex-wrap: wrap;
 .galleryCard{
+  animation: fade 500ms linear ease;
   margin: 1em;
   height: 18em;
   width: fit-content;
