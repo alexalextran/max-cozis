@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../Components/footer';
+import Footer from '../Components/Footer';
 import AboutMe from '../Components/AboutMe';
 import Contact from '../Components/Contact';
 import LandingPage from '../Components/LandingPage';

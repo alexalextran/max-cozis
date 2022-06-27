@@ -61,23 +61,27 @@ useEffect(() => {
       threshold: 0.7,
     })
 
+    const observer6 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        nav_li[6].classList.toggle("navObserver", entry.isIntersecting)
+      })
+    },
+    {
+      threshold: 1,
+    })
+
     observer0.observe(sections[0])
     observer1.observe(sections[1])
     observer2.observe(sections[2])
     observer3.observe(sections[3])
     observer4.observe(sections[4])
     observer5.observe(sections[5])
-  
+    observer6.observe(sections[6])
+
     
-
-  
-
-  
-
-  
-
- 
 },[])
+
+
 
     
 
@@ -93,6 +97,8 @@ useEffect(() => {
             <li className='nav-li'>
             </li>
             <li className='nav-li'>
+            </li>
+            <li className='nav-li'> 
             </li>
             <li className='nav-li'> 
             </li>

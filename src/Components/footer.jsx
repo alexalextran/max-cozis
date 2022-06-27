@@ -7,9 +7,18 @@ const Footer = () => {
 
 
     return (
-        <div>
-             <Link to="/dashboard" className="button">dashboard</Link>
-        </div>
+        <section className='footer'>
+             <Link to="/dashboard" className="button">Dashboard</Link>
+             <ul>
+                <li>
+                    LinkedIn
+                </li>
+                <li>
+                    Facebook
+                </li>
+             </ul>
+             <p>Designed And Developed By <a href="https://alextranportfolio.com/">Alex Tran</a></p>
+        </section>
     );
 }
 
