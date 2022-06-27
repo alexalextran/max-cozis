@@ -60,7 +60,7 @@ const Values = () => {
       ];
 
     return (
-        <section className='values'>
+        <section className='values' id="values">
                
                <Plx parallaxData={heading1}>
                <h1>“The role of the designer is that of a good, thoughtful host anticipating the needs of his guests.” – Charles Eames, designer, architect and filmmaker </h1>

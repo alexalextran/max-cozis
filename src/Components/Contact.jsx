@@ -46,7 +46,7 @@ var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes();
 
     return (
-        <section className='contact'>
+        <section className='contact' id="contact">
              
              <Plx parallaxData={title} className="plx">
             <h2 className='contact__title'>

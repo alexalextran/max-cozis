@@ -107,12 +107,12 @@ useEffect(() => {
             </li>
             </a>
 
-            <a href="#aboutMe">
+            <a href="#values">
             <li className='nav-li'> 
             </li>
             </a>
 
-            <a href="#aboutMe">
+            <a href="#contact">
             <li className='nav-li'> 
             </li>
             </a>
