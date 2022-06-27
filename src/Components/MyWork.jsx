@@ -48,7 +48,7 @@ useEffect(() => {
        
     })
       return (
-        <section className="container">
+        <section className="container" id='myworks'>
            <div className='myworks__header'>
             <h1>My Works</h1>
             <h3>Gallery Mode</h3>

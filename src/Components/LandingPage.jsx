@@ -5,7 +5,7 @@ import {MdKeyboardArrowDown} from 'react-icons/md'
 const LandingPage = () => {
 
     return (
-        <section className="video-header">
+        <section className="video-header" id="video-header">
   <video src={LandingPageVideo}   
           muted
           autoPlay={"autoplay"}

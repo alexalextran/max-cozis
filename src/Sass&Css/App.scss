@@ -119,6 +119,7 @@ section{
      img{
       width: fit-content;
       height: 21em;
+      max-width: 100%;
      }
      margin: 2em 0;
       width: 100%;
@@ -182,6 +183,8 @@ section{
     width: fit-content;
     height: inherit;
     padding: 0.8em;
+    max-width: 100%;
+    min-width: 100%;
  
   }
  

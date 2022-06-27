@@ -256,6 +256,7 @@ section {
   width: -moz-fit-content;
   width: fit-content;
   height: 21em;
+  max-width: 100%;
 }
 
 .skills {
@@ -372,6 +373,8 @@ section {
   width: fit-content;
   height: inherit;
   padding: 0.8em;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .skillsCard p {

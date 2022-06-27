@@ -37,7 +37,7 @@ const MySkills = () => {
 
     
     return (
-        <section className='skills' onMouseMove={moveBackground}>
+        <section className='skills' id='skills' onMouseMove={moveBackground}>
             <Plx parallaxData={exampleParallaxData} className="plx">
             <div className='skills__left skill_d'>
                 <h1>What I'm Proficient With</h1>
