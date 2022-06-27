@@ -129,7 +129,7 @@ $spotifyGreen: #2ecc71;
  
  &::-webkit-scrollbar-thumb
  {     
-     background-color: $spotifyGreen;
+     background-color: rgb(232,76,61);
     
  }
 }
@@ -141,7 +141,7 @@ $spotifyGreen: #2ecc71;
     top: 1%;
     z-index: 100;
     padding:  0.5rem 2rem;
-    background-color: $spotifyGreen;
+    background-color: rgb(232,76,61);
     color: white;
     border-radius: 0.5rem;
     box-shadow: 0 10px 10px -2px $darkmode;

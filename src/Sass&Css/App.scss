@@ -16,6 +16,7 @@ html {
   overflow-x: hidden;
 }
 body {
+  @include scrollbar;
   margin: 0;
   overflow-x: hidden;
 }
@@ -476,8 +477,18 @@ nav{
     border-radius: 50%;
     border: 0.2rem solid #e84c3d;
     background-color: transparent;
+    transition: all 500ms;
   }
 
+}
+
+.navObserver{
+  border: 0.2rem solid black;
+  transform: scale(1.5);
+}
+.navObserverW{
+  border: 0.2rem solid white;
+  transform: scale(1.5);
 }
 
 //login

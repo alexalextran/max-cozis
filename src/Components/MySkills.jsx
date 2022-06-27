@@ -22,7 +22,7 @@ const MySkills = () => {
       const exampleParallaxData = [
         {
           start: 'self',
-          duration: '50vh',
+          duration: '40vh',
           properties: [
             {
               startValue: 0,
