@@ -30,7 +30,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100% !important;
     height: auto !important;
   }
 
@@ -115,6 +114,13 @@
     }
     .slick-arrow .slick-next, .slick-arrow .slick-prev, .slick-next:before, .slick-prev:before{
       font-size: 40px !important;
+    }
+
+    .slick-slide img{
+      z-index: 1 !important;
+   height: 24em !important;
+   width: fit-content !important;
+   transition: all 500ms;
     }
   
     

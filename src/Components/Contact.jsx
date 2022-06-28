@@ -50,7 +50,7 @@ var time = today.getHours() + ":" + today.getMinutes();
              
              <Plx parallaxData={title} className="plx">
             <h2 className='contact__title'>
-              Don't Be Afrait To Send Me A Message!
+              Don't Be Afraid To Send Me A Message!
             </h2>
             </Plx>
 
