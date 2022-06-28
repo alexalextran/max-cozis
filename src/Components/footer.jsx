@@ -13,9 +13,6 @@ const Footer = () => {
                 <li>
                     LinkedIn
                 </li>
-                <li>
-                    Facebook
-                </li>
              </ul>
              <p>Designed And Developed By <a href="https://alextranportfolio.com/">Alex Tran</a></p>
         </section>

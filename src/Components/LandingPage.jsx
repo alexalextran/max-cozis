@@ -14,7 +14,8 @@ const LandingPage = () => {
   <div className="viewport-header">
     <h2>
       <span>Max Cozis</span>
-      Graphic Composer 
+      Graphic Composer <br></br>
+      <p className='notice'>(Not final product)</p>
     </h2>
     <MdKeyboardArrowDown size="2rem" className='arrow'/>
   </div>

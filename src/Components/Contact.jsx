@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useRef } from 'react';
+// import emailjs from '@emailjs/browser';
 import logo from '../Assets/punpun-transparent.png'
 import Plx from "react-plx";
 
@@ -45,6 +46,21 @@ const Contact = () => {
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes();
 
+//EmailJs Function (todo whenever client is ready)
+const form = useRef();
+
+const sendEmail = (e) => {
+  e.preventDefault();
+
+//   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+//     .then((result) => {
+//         console.log(result.text);
+//     }, (error) => {
+//         console.log(error.text);
+//     });
+ };
+
+
     return (
         <section className='contact' id="contact">
              
@@ -57,18 +73,18 @@ var time = today.getHours() + ":" + today.getMinutes();
             <Plx parallaxData={exampleParallaxData} className="plx">
 <div>
   <div className="card cardLeft">
-    <form>
+    <form ref={form} onSubmit={sendEmail}>
     <h1>Startup <span>Cinema</span></h1>
     <div className="title">
-      <input placeholder='Email...'></input>
+      <input placeholder='Email...' name="user_email"></input>
       <span>movie</span>
     </div>
     <div className="name">
-    <input placeholder='Name...'></input>
+    <input placeholder='Name...' name="user_name"></input>
       <span>Director</span>
     </div>
     <div className='description'>
-       <textarea className='description__textarea' placeholder='Message...'></textarea> 
+       <textarea className='description__textarea' placeholder='Message...' name="message"></textarea> 
        <span>Description</span>
     </div>
     <div className="button">
