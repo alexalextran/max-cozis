@@ -2,14 +2,15 @@
 @import url("slick-carousel/slick/slick-theme.css");
 
 .container {
-    padding: 5rem;
+    font-size: 1vw;
+    padding: 5em;
     background: white;
     height: fit-content;
     text-align: center;
   }
 
   .slick-slide div{
-    width: fit-content ;
+
     text-align: center;
     margin: auto;
     background-color: transparent;
@@ -17,8 +18,8 @@
 
   .slick-slide img{
     z-index: 1 !important;
- height: 30rem !important;
- width: auto !important;
+ height: 30em !important;
+ width: fit-content !important;
  transition: all 500ms;
   }
 
@@ -29,6 +30,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100% !important;
+    height: auto !important;
   }
 
   .works__text{
@@ -38,16 +41,16 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5em 1.5em;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     opacity: 0;
     z-index: 2;
     transition: all 500ms;
   }
 
   .img:hover > img{
-   filter:blur(0.4rem);
+   filter:blur(0.4em);
   }
   .img:hover > .works__text{
     opacity: 1;
@@ -58,6 +61,11 @@
     display: flex  !important;
     justify-content: center !important;
     align-items: center !important;
+  }
+
+  .slick-slide{
+    width: 240 !important;
+    height: auto !important;
   }
 
    .slick-arrow .slick-next, .slick-arrow .slick-prev, .slick-next:before, .slick-prev:before{
@@ -96,3 +104,18 @@
     justify-content: center;
     align-items: center;
   }
+
+
+  @media all and (max-width: 425px) {
+
+    .container{
+      font-size: 2vw;
+      padding: 2em;
+      padding-bottom: 3em;
+    }
+    .slick-arrow .slick-next, .slick-arrow .slick-prev, .slick-next:before, .slick-prev:before{
+      font-size: 40px !important;
+    }
+  
+    
+    }
