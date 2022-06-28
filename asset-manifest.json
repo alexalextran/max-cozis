@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/max-cozis/static/css/main.42c337f6.css",
+    "main.css": "/max-cozis/static/css/main.fe06c04a.css",
     "main.js": "/max-cozis/static/js/main.c0b402e8.js",
     "static/js/787.db0fc8cc.chunk.js": "/max-cozis/static/js/787.db0fc8cc.chunk.js",
     "static/media/landingPage-MC.mp4": "/max-cozis/static/media/landingPage-MC.ee3d2963b96235bfb76f.mp4",
@@ -18,12 +18,12 @@
     "static/media/slick.woff": "/max-cozis/static/media/slick.295183786cd8a1389865.woff",
     "static/media/Adobe_Illustrator.svg": "/max-cozis/static/media/Adobe_Illustrator.883c82bcfa8e4f39f33068e1165b94a6.svg",
     "index.html": "/max-cozis/index.html",
-    "main.42c337f6.css.map": "/max-cozis/static/css/main.42c337f6.css.map",
+    "main.fe06c04a.css.map": "/max-cozis/static/css/main.fe06c04a.css.map",
     "main.c0b402e8.js.map": "/max-cozis/static/js/main.c0b402e8.js.map",
     "787.db0fc8cc.chunk.js.map": "/max-cozis/static/js/787.db0fc8cc.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.42c337f6.css",
+    "static/css/main.fe06c04a.css",
     "static/js/main.c0b402e8.js"
   ]
 }
