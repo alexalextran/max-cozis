@@ -19,12 +19,12 @@
   .slick-slide img{
     z-index: 1 !important;
  height: 30em !important;
- width: fit-content !important;
+
  transition: all 500ms;
   }
 
   .img{
-    
+    width: fit-content !important;
     position: relative;
     text-align: center !important;
     display: flex;
@@ -63,7 +63,6 @@
   }
 
   .slick-slide{
-    width: 240 !important;
     height: auto !important;
   }
 
@@ -119,7 +118,6 @@
     .slick-slide img{
       z-index: 1 !important;
    height: 24em !important;
-   width: fit-content !important;
    transition: all 500ms;
     }
   
