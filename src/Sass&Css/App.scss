@@ -312,16 +312,15 @@ section{
   padding: 4em;
   font-size: 1vw;
   @include flexCenter(column);
-  $red: #e84c3d;
 $grey: #ecedef;
-$black: #343434;
+
 
 .contact__title{
   margin-bottom: 2rem;
 }
 
 .card {
-  background: linear-gradient(to bottom, $red 0%, $red 26%, $grey 26%, $grey 100%);
+  background: linear-gradient(to bottom, $bloodOrange 0%, $bloodOrange 26%, $grey 26%, $grey 100%);
   height: 40em;
   float: left;
   position: relative;
@@ -429,7 +428,7 @@ img {
   text-align: center;
   text-transform: uppercase;
   h3 {
-    color: $red;
+    color: $bloodOrange;
     margin: .9em 0 0 0;
     font-size: 6em;
     
@@ -445,30 +444,30 @@ img {
   width: 0;
   margin-right: 4em;
   margin-top: 2em;
-  box-shadow: 1px 0 0 1px $black,
-  5px 0 0 1px $black,
-  10px 0 0 1px $black,
-  11px 0 0 1px $black,
-  15px 0 0 1px $black,
-  18px 0 0 1px $black,
-  22px 0 0 1px $black,
-  23px 0 0 1px $black,
-  26px 0 0 1px $black,
-  30px 0 0 1px $black,
-  35px 0 0 1px $black,
-  37px 0 0 1px $black,
-  41px 0 0 1px $black,
-  44px 0 0 1px $black,
-  47px 0 0 1px $black,
-  51px 0 0 1px $black,
-  56px 0 0 1px $black,
-  59px 0 0 1px $black,
-  64px 0 0 1px $black,
-  68px 0 0 1px $black,
-  72px 0 0 1px $black,
-  74px 0 0 1px $black,
-  77px 0 0 1px $black,
-  81px 0 0 1px $black;
+  box-shadow: 1px 0 0 1px $darkmodeAlt,
+  5px 0 0 1px $darkmodeAlt,
+  10px 0 0 1px $darkmodeAlt,
+  11px 0 0 1px $darkmodeAlt,
+  15px 0 0 1px $darkmodeAlt,
+  18px 0 0 1px $darkmodeAlt,
+  22px 0 0 1px $darkmodeAlt,
+  23px 0 0 1px $darkmodeAlt,
+  26px 0 0 1px $darkmodeAlt,
+  30px 0 0 1px $darkmodeAlt,
+  35px 0 0 1px $darkmodeAlt,
+  37px 0 0 1px $darkmodeAlt,
+  41px 0 0 1px $darkmodeAlt,
+  44px 0 0 1px $darkmodeAlt,
+  47px 0 0 1px $darkmodeAlt,
+  51px 0 0 1px $darkmodeAlt,
+  56px 0 0 1px $darkmodeAlt,
+  59px 0 0 1px $darkmodeAlt,
+  64px 0 0 1px $darkmodeAlt,
+  68px 0 0 1px $darkmodeAlt,
+  72px 0 0 1px $darkmodeAlt,
+  74px 0 0 1px $darkmodeAlt,
+  77px 0 0 1px $darkmodeAlt,
+  81px 0 0 1px $darkmodeAlt;
 }
 }
 
@@ -486,7 +485,7 @@ nav{
     height: 1rem;
     margin: 1rem 0;
     border-radius: 50%;
-    border: 0.2rem solid #e84c3d;
+    border: 0.2rem solid $bloodOrange;
     background-color: transparent;
     transition: all 500ms;
   }
@@ -512,7 +511,7 @@ nav{
     width: 60%;
     height: fit-content;
     padding: 4rem;
-    background-color: #e84c3d;
+    background-color: $bloodOrange;
     color: white;
     border-radius: 2rem;
     font-size: 1.4rem;
@@ -563,7 +562,7 @@ nav{
     text-align: center;
     margin-top: 4rem;
     border-radius: 1rem;
-    background-color: #e84c3d;
+    background-color: $bloodOrange;
     margin-bottom: 2rem;
   }
   .dashboard__main{
@@ -669,11 +668,11 @@ nav{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: $blue;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 0.1em #2196F3;
+  box-shadow: 0 0 0.1em $blue;
 }
 
 input:checked + .slider:before {
@@ -697,7 +696,7 @@ input:checked + .slider:before {
 .footer{
   font-size: 1vw;
   height: fit-content;
-  background-color: #343434;
+  background-color: $darkmodeAlt;
   padding: 2em;
   .button{
     @include button;

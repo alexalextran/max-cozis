@@ -43,7 +43,7 @@ const skills_learning = [
     Image: {Concept_Art}
     },
     {
-    Name: "idk",
+    Name: "Placeholder",
     Image: {ColorTheory}
     }
 ]

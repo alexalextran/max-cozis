@@ -27,7 +27,7 @@ const AboutMe = () => {
       const aboutmeLeft = [
         {
           start: 'self',
-          duration: '50vh',
+          duration: '45vh',
           properties: [
             {
               startValue: 0,
